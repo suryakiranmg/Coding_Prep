@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+ int size;
+ bool flag;
+ cout<<"Enter the size of array"<<endl;
+ cin>>size;
+ int A[size] ;
+ for(int i=0;i<size;i++)
+ {
+ cout<<"\nEnter the number:";
+ cin>>A[i];
+ cout<<A[i];
+ }
+ 
+ for(int i=0; i<size-1; i++)
+ {
+  {
+   for(int j=i+1; j<size; j++)
+   {
+    if(A[i]+A[j] == 8)
+    flag = true;
+   }
+  }
+
+ }
+ if(flag == true)
+     cout<<"\nYES";
+ else 
+     cout<<"\nNO";
+ return 0;
+}
