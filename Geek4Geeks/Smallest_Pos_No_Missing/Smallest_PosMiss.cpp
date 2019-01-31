@@ -30,3 +30,41 @@ int main()
     return 0;
 }
 
+//////////////////////Logic not fully done!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int A[] = {2, 3, 7, 6, 8, -1, -10, 15};
+    int n= 8;
+    // write your code in C++14 (g++ 6.2.0)
+    for(int i=0; i<n; i++)
+    {
+        if((A[i]<1)||(A[i]>n) )
+                A[i]=0;
+    }
+    int count=0;
+    for(int i=0; i<n; i++)
+    {
+        cout<<A[i]<<" ";
+        if(A[i]>0) count++;
+    }
+    cout<<endl<<count<<endl;
+    int sum=0;
+    for(int i=0; i<n; i++)
+    {
+        if(A[i]>count) 
+        { A[i]=0; 
+        }
+        sum += A[i];
+        cout<<A[i]<<" ";
+    }
+    
+    int ans = (count*(count+1)/2) - sum;
+    cout<<endl<<ans<<endl;
+    
+   
+    return 0;
+}
